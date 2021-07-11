@@ -3,8 +3,8 @@ package com.iress.toyrobot;
 public class Utilities {
 
     public static boolean isOnTable(int xCoordinate, int yCoordinate) {
-        return (xCoordinate >= 0 && yCoordinate >= 0
-                && xCoordinate <= 4 && yCoordinate <= 4) ? true : false;
+        return (xCoordinate >= Constants.TABLE_WIDTH_START && yCoordinate >= Constants.TABLE_HEIGHT_START
+                && xCoordinate <= Constants.TABLE_WIDTH_END && yCoordinate <= Constants.TABLE_HEIGHT_END) ? true : false;
     }
 
     public static boolean isOnTable(Coordinates coordinates) {
@@ -24,7 +24,7 @@ public class Utilities {
 
     }
 
-    private static String[] getLocationFromInput(String line){
+    public static String[] getLocationFromInput(String line){
         String[] lineArray = line.split("[ ]+");
         return lineArray[1].split(",");
     }

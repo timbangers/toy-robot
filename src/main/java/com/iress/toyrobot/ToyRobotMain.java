@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ToyRobotMain {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         ToyRobotMain main = new ToyRobotMain();
         main.run(args);
     }
