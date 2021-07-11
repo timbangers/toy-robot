@@ -1,4 +1,4 @@
-#toy-robot project
+## toy-robot project
 
 The application is a simulation of a toy robot moving on a square table top, of dimensions 5 units x 5 units. There are no
 other obstructions on the table surface. The robot is free to roam around the surface of the table, but must be prevented
@@ -26,11 +26,11 @@ Provide test data to exercise the application.
 It is not required to provide any graphical output showing the movement of the toy robot.
 The application should handle error states appropriately and be robust to user input.
 
-###Constraints:
+### Constraints:
 The toy robot must not fall off the table during movement. This also includes the initial placement of the toy robot. Any
 move that would cause the robot to fall must be ignored.
 
-###Running the app:
+### Running the app:
 The app is built using gradle. Inputs are in the form of text files located in /resources.
 Build the app into a jar first using:
 
@@ -40,4 +40,4 @@ To run use the command:
 
 `java -jar toy-robot.jar <filename>`
 
-where <filename> is a file in the resources folder.
+where <filename> is a file in the resources folder.************************
