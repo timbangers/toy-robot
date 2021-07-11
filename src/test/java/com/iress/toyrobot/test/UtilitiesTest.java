@@ -2,12 +2,14 @@ package com.iress.toyrobot.test;
 
 import com.iress.toyrobot.Coordinates;
 import com.iress.toyrobot.DIRECTION;
-import com.iress.toyrobot.Robot;
+import com.iress.toyrobot.ToyRobot;
 import com.iress.toyrobot.Utilities;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test class for Utilities
+ */
 public class UtilitiesTest {
 
     @Test
@@ -28,7 +30,7 @@ public class UtilitiesTest {
     @Test
     public void testIsPlaced(){
         for (int i = 0; i <=4; i++){
-            Robot r = new Robot();
+            ToyRobot r = new ToyRobot();
             Coordinates c = new Coordinates(i,i);
             r.setCoordinates(c);
             assertTrue(Utilities.isPlaced(r));
@@ -42,7 +44,6 @@ public class UtilitiesTest {
             assertEquals(i,Utilities.getCoordinateFromInput(String.format("PLACE %d,%d,SOUTH", i,i)).getxCoordinate());
             assertNotEquals(-1,Utilities.getCoordinateFromInput(String.format("PLACE %d,%d,SOUTH", i,i)).getxCoordinate());
             assertNotEquals(-1,Utilities.getCoordinateFromInput(String.format("PLACE %d,%d,SOUTH", i,i)).getyCoordinate());
-
         }
     }
 
@@ -61,7 +62,6 @@ public class UtilitiesTest {
         assertEquals(lineArray[0],Utilities.getLocationFromInput(line)[0]);
         assertEquals(lineArray[1],Utilities.getLocationFromInput(line)[1]);
         assertEquals(lineArray[2],Utilities.getLocationFromInput(line)[2]);
-
     }
 }
 

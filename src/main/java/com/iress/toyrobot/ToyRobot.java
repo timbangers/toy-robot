@@ -1,6 +1,9 @@
 package com.iress.toyrobot;
 
-public class Robot {
+/**
+ * This ToyRobot class contains a location in the form of coordinates and a direction (North, South, East, West)
+ */
+public class ToyRobot {
 
     Coordinates coordinates;
     DIRECTION direction;

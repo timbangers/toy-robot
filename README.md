@@ -40,4 +40,21 @@ To run use the command:
 
 `java -jar toy-robot.jar <filename>`
 
-where <filename> is a file in the resources folder.************************
+where <filename> is a file in the resources folder.
+
+The sample files included in the resources folder are:
+
+* initialoutoftable.txt
+* invalidcommands.txt
+* invalidplace.txt
+* orignalposition.txt
+* placemultiple.txt
+* robot.txt
+
+### Testing the app:
+Running unit tests is simple as executing the command
+
+`gradle test`
+
+Alternatively, once the project is cloned and loaded into an ide, the test classes can be run from the test folder.
+

@@ -1,13 +1,20 @@
 package com.iress.toyrobot;
 
-public class RobotController {
+/**
+ * This RobotController class gives commands to a Robot
+ */
+public class ToyRobotController {
 
-    private Robot robot;
+    private ToyRobot robot;
 
-    public RobotController(Robot robot) {
+    public ToyRobotController(ToyRobot robot) {
         this.robot = robot;
     }
 
+    /**
+     * Turns a robot to a given direction
+     * @param turnDirection
+     */
     public void turn(String turnDirection){
         if (Utilities.isPlaced(this.robot)) {
             switch (turnDirection) {
@@ -21,15 +28,20 @@ public class RobotController {
                     break;
             }
         }
-
     }
 
+    /**
+     * Moves the robot. An unplaced robot will be ignored
+     */
     public void move(){
         if (Utilities.isPlaced(robot)){
             robot.getDirection().move(robot.getCoordinates());
         }
     }
 
+    /**
+     * Gives the location of a robot. An unplaced robot will not have coordinates
+     */
     public void location(){
         if (robot.getCoordinates() != null) {
             System.out.println(String.format("%d,%d %s", robot.getCoordinates().getxCoordinate(), robot.getCoordinates().getyCoordinate(), robot.getDirection()));
@@ -38,17 +50,17 @@ public class RobotController {
         }
     }
 
+    /**
+     * This method palces or gives a robot valid coordinates within the limits of the table
+     * @param coordinates
+     * @param direction
+     */
     public void place(Coordinates coordinates, DIRECTION direction){
             robot.setCoordinates(coordinates);
             robot.setDirection(direction);
     }
 
-    public Robot getRobot() {
+    public ToyRobot getRobot() {
         return robot;
     }
-
-    public void setRobot(Robot robot) {
-        this.robot = robot;
-    }
-
 }

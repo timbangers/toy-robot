@@ -7,7 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 
+/**
+ * Test class for DIRECTION enum
+ */
 public class DirectionTest {
+
     @Test
     public void testTurnLeft(){
         Arrays.stream(DIRECTION.values()).forEach(direction -> {

@@ -1,5 +1,8 @@
 package com.iress.toyrobot;
 
+/**
+ * This class represents an x and y axis coordinate
+ */
 public class Coordinates {
 
     int xCoordinate;
